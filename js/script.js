@@ -3,8 +3,6 @@
   $( "#rainbow > div").click(function(e) {
   var box = $(e.currentTarget);
   var PokeName = box.attr("value");
-  alert(box.attr("data-color"));
-  alert(PokeName);
   localStorage.setItem("player", PokeName);
   localStorage.setItem("color" , box.attr("data-color"));
   window.location = "pokemon_battle.html";
