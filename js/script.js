@@ -64,7 +64,7 @@ function getPokemonImage(id) {
 }
 
 // Sets img based on pokemon id
-function setImageAttribute(idStr, imgStr) {s
+function setImageAttribute(idStr, imgStr) {
   $('#' + idStr).attr('src', imgStr);
 }
 
@@ -115,6 +115,13 @@ function setImageAttribute(idStr, imgStr) {s
   move_3.text(userMoves[2].name);
   move_4.text(userMoves[3].name);
 
+  var userPokemonId = userPokemon.pkdx_id,
+      userPokemonImg = getPokemonImage(userPokemonId),
+      cpuPokemonId = cpuPokemon.pkdx_id,
+      cpuPokemonImg = getPokemonImage(cpuPokemonId);
+
+  $('#userPokemonImg').attr('src',userPokemonImg);
+  $('#cpuPokemonImg').attr('src', cpuPokemonImg)
 
   //Atk Btn Click Handler
   attack_btn.click(function(){
