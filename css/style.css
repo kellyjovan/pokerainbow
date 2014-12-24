@@ -1,0 +1,151 @@
+
+    body{
+      padding:0;
+      margin:0;
+    }
+    #rainbow{
+      font-size:0;
+        font-size: 0;
+        position: absolute;
+        top: 200px;
+        left: 0;
+        height: 100px;
+        width: 100%;
+    }
+    #rainbow > div{
+      cursor:pointer;
+      width:14.2%;
+      height:350px;
+      /*border:1px solid red;*/
+      display: inline-block;
+      font-size:0;
+      position:relative;
+    }
+    #rainbow > div:hover .pokemon{
+      background-color:#111;
+      
+    }
+    
+    .pokemon{
+      transition: background-color 100ms linear;
+      background-color:transparent;
+      position:absolute;
+      top:10px;
+      left:10px;
+      bottom:10px;
+      right:10px;
+      background-size:contain;
+      background-repeat:no-repeat;
+      background-position:center center;
+      transition:all 20ms linear;
+    }
+    
+    .bg-red .pokemon{
+      background-image:url(http://th09.deviantart.net/fs71/PRE/i/2013/224/c/4/infernape_vector_by_spacetchi-d6hu9n3.png);
+    }
+     .bg-red:hover .pokemon{
+      background-image:url(http://i.imgur.com/ZwQ45j6.png);
+    }
+    
+    .bg-orange .pokemon{
+      background-image:url(http://fc00.deviantart.net/fs71/i/2012/154/2/4/proud_charmander_by_kol98-d525yi2.png);
+    }
+    .bg-orange:hover .pokemon{
+      background-image:url(http://fc09.deviantart.net/fs70/i/2013/082/7/5/004_charmander_by_pklucario-d5z1g9v.png);
+    }
+    
+    
+    .bg-green .pokemon{
+      background-image:url(http://img3.wikia.nocookie.net/__cb20140903033555/pokemon/images/e/ea/001Bulbasaur_AG_anime.png);
+    }
+     .bg-green:hover .pokemon{
+      background-image:url(http://fc03.deviantart.net/fs70/f/2010/238/6/d/Bulbasaur_by_Xous54.png);
+    }
+    
+    .bg-violet .pokemon{
+            background-image:url(http://img2.wikia.nocookie.net/__cb20140702014014/pokemon/images/7/71/012Butterfree_Dream.png);
+
+    }
+    .bg-violet:hover .pokemon{
+            background-image:url(http://2.bp.blogspot.com/_L7OAaxh84Cs/SqCmQQ2KImI/AAAAAAAAACo/-iSURlXe7vI/s320/012Butterfree.png);
+
+    }
+    
+    
+      .bg-yellow .pokemon{
+      background-image:url(http://cdn.bulbagarden.net/upload/thumb/0/0d/025Pikachu.png/250px-025Pikachu.png);
+    }
+    .bg-yellow:hover .pokemon{
+      background-image:url(http://gamerfitnation.com/wp-content/uploads/2011/12/pikachu.png);
+    }
+    
+
+    .bg-indigo .pokemon{
+      background-image:url(http://cdn.bulbagarden.net/upload/thumb/4/41/382Kyogre.png/250px-382Kyogre.png);
+    }
+    .bg-indigo:hover .pokemon{
+      background-image:url(http://fc06.deviantart.net/fs71/f/2009/341/b/8/Kyogre_v_3_by_Xous54.png);
+    }
+    
+    
+    .bg-blue .pokemon{
+      background-image:url(http://vignette2.wikia.nocookie.net/pokemontowerdefense/images/3/39/007Squirtle.png/revision/latest?cb=20130104234028);
+    }
+    .bg-blue:hover .pokemon{
+      background-image:url(http://fc09.deviantart.net/fs70/f/2010/242/e/b/squirtle_by_xous54-d2xnwv6.png);
+    }
+
+
+    .bg-red{
+      background-color:#ff0000;
+    }
+    .bg-orange{
+      background-color:#ff8000;
+    }
+    .bg-yellow{
+      background-color:#ffff00;
+    }
+    .bg-green{
+      background-color:#008000;
+    }
+    .bg-blue{
+      background-color:#0000ff;
+    }
+    .bg-indigo{
+      background-color:#4B0082;
+    }
+    .bg-violet{
+      background-color:#9400D3;
+    }
+
+    .font-red{
+      color:#ff0000;
+    }
+    .font-orange{
+      color:#ff8000;
+    }
+    .font-yellow{
+      color:#ffff00;
+    }
+    .font-green{
+      color:#008000;
+    }
+    .font-blue{
+      color:#0000ff;
+    }
+    .font-indigo{
+      color:#4B0082;
+    }
+    .font-violet{
+      color:#9400D3;
+    }
+    body {
+        background-image: url('http://i.ytimg.com/vi/SR8F2SZunjw/maxresdefault.jpg');
+    }
+    
+    h1{
+      color:white;
+    }
+    .well{
+        overflow: auto;
+    }

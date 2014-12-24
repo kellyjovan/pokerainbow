@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="css/style2.css" rel="stylesheet"/>
+    <meta charset="utf-8">
+    <title>JS Bin</title>
+  </head>
+  <body>
+    <div class="stage player col-sm-12 col-md-12 col-lg-12">
+      <div id="player" class="col-sm-5 col-md-5 col-lg-5">
+       <img id="userPokemonImg" src="http://th00.deviantart.net/fs70/PRE/i/2012/261/2/b/pokemon_conquest___vaporeon_by_kalas17-d5f4nup.png"/>
+        <div id="playerHp" class="col-sm-12 col-md-12 col-lg-12">
+          <div id="pHp" class="health-bar" data-total="1000" data-value="1000">
+            <div class="bar">
+              <div class="hit"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2 col-md-2 col-lg-2"></div>
+      <div id="cpu" class="col-sm-5 col-md-5 col-lg-5">
+        <img id="cpuPokemonImg" src="http://th00.deviantart.net/fs70/PRE/i/2012/261/2/b/pokemon_conquest___vaporeon_by_kalas17-d5f4nup.png"/>
+        <div id="cpuHp" class="col-sm-12 col-md-12 col-lg-12">
+          <div id="cHp" class="health-bar" data-total="1000" data-value="1000">
+            <div class="bar">
+              <div class="hit"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container atk_menu col-sm-12 col-md-12 col-lg-12">
+      <div class="well">
+        <div class="choice_container">
+          <div class="question col-sm-4 col-md-4 col-lg-4">
+            <h3>What Are You Going To Do?</h3>
+          </div>
+          <ul class="choices col-sm-6 col-md-6 col-lg-6">
+            <li id="attack"><img class="arrow" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-forward-128.png"/><h3>Attack</h3></li>
+            <li id="spec_atk"><img class="arrow" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-forward-128.png"/><h3>Spec. Atk</h3></li>
+            <li id="item"><img class="arrow" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-forward-128.png"/><h3>Item</h3></li>
+          </ul>
+        </div>
+        <div id="comments"><h3>Comments</h3></div>
+        <div id="item_menu">
+          <div class="question col-sm-3 col-md-3 col-lg-3">
+            <h3>Items</h3>
+          </div>
+          <ul class="choices col-sm-8 col-md-8 col-lg-8">
+            <li id="heal" data-value="3"><img class="arrow" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-forward-128.png"/><h3>Potions x3</h3></li>
+            <li id="atk_buff" data-value="2"><img class="arrow" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-forward-128.png"/><h3>Atk x2</h3></li>
+            <li id="def_buff" data-value="2"><img class="arrow" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-forward-128.png"/><h3>Defense x2</h3></li>
+            <li id="go_back"><img class="arrow" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-forward-128.png"/><h3>Go Back</h3></li>
+          </ul>
+        </div>
+        <div id="moves_menu">
+          <div class="question col-sm-2 col-md-2 col-lg-2">
+            <h3>Moves</h3>
+          </div>
+          <ul class="choices col-sm-10 col-md-10 col-lg-10">
+            <li id="move_1" data-value="3"><img class="arrow" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-forward-128.png"/><h3>Move1</h3></li>
+            <li id="move_2" data-value="2"><img class="arrow" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-forward-128.png"/><h3>Move2</h3></li>
+            <li id="move_3" data-value="2"><img class="arrow" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-forward-128.png"/><h3>Move3</h3></li>
+            <li id="move_4"><img class="arrow" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-forward-128.png"/><h3>Move4</h3></li>
+            <li id="go_back2"><img class="arrow" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-forward-128.png"/><h3>Go Back</h3></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src='https://jquery-ui.googlecode.com/svn/tags/1.8rc3/ui/jquery-ui.js'></script>
+    <script src="https://jashkenas.github.io/underscore/underscore-min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

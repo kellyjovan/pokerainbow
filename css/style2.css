@@ -1,0 +1,126 @@
+body{
+  background: url(http://wallpoper.com/images/00/28/19/74/pokemon-poke_00281974.jpg);
+  background-size: cover;
+}
+/****************************************************************************/
+/*  Stage                                                                   */
+/****************************************************************************/
+.stage{
+  position: fixed;
+  bottom: 12em;
+  top: 0;
+}
+.stage div{
+  display: inline-block;
+}
+#player, #cpu{
+  height: 100%;
+}
+#player img, #cpu img{
+  width: 20em;
+  position: absolute;
+  bottom: 2em;
+  left: 15%;
+}
+/****************************************************************************/
+/*  Comments                                                                */
+/****************************************************************************/
+#comments{
+  position: absolute;
+  z-index: 22;
+  height: 7em;
+  padding: 1em;
+}
+
+/****************************************************************************/
+/*  Health Bars                                                             */
+/****************************************************************************/
+#playerHp, #cpuHp{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.health-bar {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 2em;
+  padding: 0.25em;
+  background: #ddd;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  position: relative;
+}
+.bar {
+  background: #c54;
+  width: 100%;
+  height: 10px;
+  position: relative;
+  transition: width .3s linear;
+}
+
+.hit {
+  background: rgba(255,255,255,0.6);
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 10px;
+  width: 0px;
+  
+  transition: width .3s linear;
+}
+
+/****************************************************************************/
+/*  Menu                                                                    */
+/****************************************************************************/
+@-webkit-keyframes blink {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes blink {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+.arrow{
+  height: 2em;
+  margin-bottom: 0.6em;
+  /* visibility: hidden; */
+  display: inline-block;
+  opacity: 0;
+}
+.atk_menu{
+  position: fixed;
+  bottom: 1em;
+}
+.choices{
+  display: inline-block;
+}
+.choices li{
+  display: inline-block;
+  padding: 1em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.choices li h3{
+  display:inline-block;
+}
+.choices li:hover .arrow{
+  -webkit-animation:blink 1s infinite;
+  animation:blink 1s infinite;
+}
+.question{
+  border-right: solid 1px #FFFF66;
+  height: 7em;
+  padding: 1em;
+}
+.well{
+  height: 9em;
+  background-color: #FFFFE0;
+  border-color: #FFFF66;
+}
+
