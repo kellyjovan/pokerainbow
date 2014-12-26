@@ -67,21 +67,30 @@ function setImageAttribute(idStr, imgStr) {
 }
 
 //Pokemon Battle Logic
-  var cHp = $('#cHp'),
-      pHp = $('#pHp'),
-      attack_btn = $('#attack'),
-      spec_atk_btn = $('#spec_atk'),
-      cBar = cHp.find('.bar'),
+      //Cpu Health Bar
+  var cHp = $('#cHp'), 
+      cBar = cHp.find('.bar'), 
       cHit = cHp.find('.hit'),
+      //User Health Bar
+      pHp = $('#pHp'), 
       pBar = pHp.find('.bar'),
       pHit = pHp.find('.hit'),
-      choices = $('.choice_container'),
-      comments = $('#comments'),
-      item_btn = $('#item'),
-      item_menu = $('#item_menu'),
+      // Buttons
+      attack_btn = $('#attack') ,
+      spec_atk_btn = $('#spec_atk'),
       back_btn = $('#go_back'),
       back_btn_2 = $('#go_back2'),
+      item_btn = $('#item'),
+      //Menus
+      choices = $('.choice_container'),
+      comments = $('#comments'),
+      item_menu = $('#item_menu'),
       moves_menu = $('#moves_menu'),
+      //Items
+      potions = $('#heal'),
+      atk_buff = $('#atk_buff'),
+      def_buff = $('#def_buff'), 
+      //Moves
       move_1 = $('#move_1').find('h3'),
       move_2 = $('#move_2').find('h3'),
       move_3 = $('#move_3').find('h3'),
@@ -100,7 +109,6 @@ function setImageAttribute(idStr, imgStr) {
       userMovesList = userPokemon.moves,
       cpuMoves = [],
       userMoves = [];
-
   for(var x = 0; x < 4; x++){
     random = Math.floor(Math.random()*cpuMovesList.length);
     cpuMoves.push(cpuMovesList[random]);
@@ -126,7 +134,7 @@ function setImageAttribute(idStr, imgStr) {
     var total = cHp.data('total'),
         value = cHp.data('value');
     
-    var damage = Math.floor(Math.random()*100);
+    var damage = Math.floor(Math.random()*200);
     var newValue = value - damage;
     // calculate the percentage of the total width
     var hitWidth = (damage / total ) * 100 + "%";
@@ -143,7 +151,7 @@ function setImageAttribute(idStr, imgStr) {
     
     console.log(value, damage, hitWidth);
       if( value < 0){
-      comments.find('h3').text('You Win!');
+      comments.find('h3').text('You Win');
       choices.fadeOut(200);
       comments.fadeIn(200);
     } else{
@@ -163,7 +171,7 @@ function setImageAttribute(idStr, imgStr) {
         value = pHp.data('value');
         console.log(total, value);
     
-    var damage = Math.floor(Math.random()*100);
+    var damage = Math.floor(Math.random()*200);
     var newValue = value - damage;
     // calculate the percentage of the total width
     var hitWidth = (damage / total ) * 100 + "%";
@@ -179,8 +187,8 @@ function setImageAttribute(idStr, imgStr) {
     }, 500);
     
     console.log(value, damage, hitWidth);
-      if( value < 0){
-      comments.find('h3').text('You Lose!');
+    if( value < 0){
+      comments.find('h3').text('You Lose');
     } else{
       comments.find('h3').text('Cpu Did ' + damage +' Damage!');
       comments.delay(1000).fadeOut(200);
@@ -192,6 +200,28 @@ function setImageAttribute(idStr, imgStr) {
     item_menu.fadeIn(200);
     choices.fadeOut(200);
   });
+  //Potions Btn Click Handler
+  potions.click(function(){
+    num = potions.data('value');
+    if(num > 1){
+      num -= 1;
+      potions.data('value', num);
+      potions.find('h3').text('Potions x' + num); 
+    } else {
+      potions.fadeOut(1000);
+    }
+  });
+  //Atk Buff Click Handler
+  atk_buff.click(function(){
+    num = atk_buff.data('value');
+    if(num > 1){
+      num -= 1;
+      atk_buff.data('value', num);
+      atk_buff.find('h3').text('Atk Buff x' + num); 
+    } else {
+      atk_buff.fadeOut(1000);
+    }
+  })
   //Go Back Btn Click Handler
   back_btn.click(function(){
     choices.fadeIn(200);
